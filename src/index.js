@@ -6,7 +6,6 @@ module.exports = postcss.plugin('smartbi-transform-css', function (opts = {}) {
   
   function plugin(css, result) {
     css.walkRules((rule) => {
-      // 遍历当前ast所有rule节点
       const { selector } = rule
       if (
         selector.includes(prefix) &&
